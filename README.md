@@ -74,7 +74,7 @@ Description: HTML + CSS + JavaScript 实现动态页面
 
       
 
-#### 设计LocalStorage存储设计
+#### **设计LocalStorage存储设计**
 
 为保证数据的持久化和一致性，系统在浏览器端定义了三个本地存储对象：
 

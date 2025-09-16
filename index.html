@@ -191,7 +191,7 @@
     const show = document.querySelector(p);
     show.style.display = 'block';
   }
-  // 路由
+  // 默认路由
   const DEFAULT_PAGE = '#chat';
 
   function router() {
@@ -224,6 +224,7 @@
     }
   }
 
+  // 默认右边大图标
   function renderUserLanding() {
     const box = document.querySelector('#user .chat-window');
     box.innerHTML = `<img id="chat-icon" src="./image/liaotian.png" alt="liaotian">`;
@@ -359,7 +360,7 @@
         </div>
       </div>
     `;
-    // 绑定 发消息 按钮
+    // 绑定 发消息
     document.getElementById('btn-msg').onclick = () => {
       location.hash = `#chat?id=${user.id}`;
     };
@@ -400,7 +401,7 @@
           </div>
         </div>
     `;
-    // 绑定 发消息 按钮
+    // 绑定 发消息
     document.getElementById('btn-msg').onclick = () => {
       location.hash = `#chat?id=0`;
     };
@@ -473,13 +474,11 @@
       // 绑定发送
       bindSend();
     }
-
     // 左侧最近聊天
     renderRecentChat(mode);
   }
 
   function renderRecentChat(mode) {
-
     const panel = document.querySelector('#chat .chat-list .chat-list-body');
     if (!panel) return;
 
@@ -572,11 +571,11 @@
       `;
     }
 
-    // 计算时间：最早一条消息的时间，否则当前时间
+    // 计算时间 最早一条消息的时间，否则当前时间
     const firstTime = list.length ? list[0].ts : Date.now();
     const timeStr = new Date(firstTime).toLocaleTimeString();
 
-    // 渲染消息：左白右绿
+    // 渲染消息 左白右绿
     box.innerHTML = `
       <div class="chat-time"><time>${timeStr}</time></div>
       ${list.map(m => m.from === 'me'
