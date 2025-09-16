@@ -9,7 +9,9 @@ Description: HTML + CSS + JavaScript 实现动态页面
 - 知识点5: 路由体系
 - 知识点6: 本地存储
 
-### 👉点击此处完整界面👈
+------
+
+### 👉点击此处查看完整页面👈
 
 <img src="./image/01.png" alt="01" style="zoom: 50%;" />
 
@@ -19,7 +21,7 @@ Description: HTML + CSS + JavaScript 实现动态页面
 
 ## 设计流程和思路
 
-#### **页面（chat & user）HTML框架设计**
+### **页面（chat & user）HTML框架设计**
 
 ​	整体页面分为两个核心视图：**聊天页面（chat）和联系人页面（user）**，二者通过哈希路由进行切换。每个页面由三个区域构成: 左侧`sidebar`区域 (包含顶部三个圆点，用户头像，功能图标) , 中间联系人`chat-list`区域 (包括顶部搜索栏以及最近聊天对象), 右侧聊天窗口`chat-window`区域 (包括顶部聊天对象名称`chat-name`, 中间聊天内容`chat-box`，底部发送窗口`send-message`)。
 
@@ -72,9 +74,10 @@ Description: HTML + CSS + JavaScript 实现动态页面
 
     - 首次进入会话自动回复并存入LocalStorage
 
-      
 
-#### **设计LocalStorage存储设计**
+
+
+### **设计LocalStorage存储设计**
 
 为保证数据的持久化和一致性，系统在浏览器端定义了三个本地存储对象：
 
@@ -106,13 +109,14 @@ Description: HTML + CSS + JavaScript 实现动态页面
 
     ![user-colors](./image/user-colors.png)
 
-#### **功能与交互逻辑**
+
+
+### **功能与交互逻辑**
 
 - **Hash 路由**
-
   - 通过监听 hashchange 事件控制页面切换
   - 默认页面为 *#chat*，在刷新或首次访问时会自动跳转到聊天页面
-
+  
 - **联系人列表渲染**
 
   - 加载用户数据后动态生成 DOM 节点
