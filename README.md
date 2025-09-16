@@ -43,7 +43,10 @@ Description: HTML + CSS + JavaScript 实现动态页面
     - 页面根据LocalStorage显示最后聊天时间和最后一条消息
 
   - User page
-    - 需通过fetch获取联系人数据   (接口地址：https://jsonplaceholder.typicode.com/users)
+    - 需通过fetch获取联系人数据   
+    
+      (接口地址：https://jsonplaceholder.typicode.com/users)
+    
     - 随机生成联系人头像颜色和信息，保存LocalStorage便于重复使用
 
 - ***右边聊天窗口（chat-window)***
